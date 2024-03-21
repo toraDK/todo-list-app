@@ -31,8 +31,8 @@ Route::get('/register', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index', [
-        'title' => 'dashboard'
+Route::get('/board', function () {
+    return view('board.index', [
+        'title' => 'board'
     ]);
 });
