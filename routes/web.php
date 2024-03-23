@@ -36,3 +36,4 @@ Route::get('/board', function () {
         'title' => 'board'
     ]);
 });
+

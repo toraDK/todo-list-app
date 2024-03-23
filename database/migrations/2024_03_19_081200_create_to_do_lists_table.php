@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('to_do_list', function (Blueprint $table) {
+        Schema::create('to_do_lists', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_category');
+            $table->foreignId('id_table_name');
             $table->string('judul');
             $table->text('description')->nullable();
             $table->timestamps();
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('to_do_list');
+        Schema::dropIfExists('to_do_lists');
     }
 };
