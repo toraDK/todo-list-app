@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BoardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,14 +27,11 @@ Route::get('/login', function () {
 });
 
 Route::get('/register', function () {
-    return view('register.index', [
-        'title' => 'register'
-    ]);
+    return view('register.index', );
 });
 
-Route::get('/board', function () {
-    return view('board.index', [
-        'title' => 'board'
-    ]);
-});
+Route::resource('/board', BoardController::class);
+Route::resource('/workspace', BoardController::class);
+
+
 

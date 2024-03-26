@@ -59,7 +59,36 @@
 
   <div class="container mt-4">
     <div class="container-fluid">
-      @yield('content')
+
+      <div class="row">
+        <aside class="col-3">
+        <nav>
+            <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
+                <li class="nav-item">
+                <a class="nav-link" href="#"><i data-feather="layout" style="width: 20px; margin-right: 6px"></i>Board</a>
+                </li>
+            </ul>
+            
+            <hr>
+            <h6 class="mt-4 text-muted">
+                <span>MY WORKSPACE</span>
+            </h6>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
+                <li class="nav-item">
+                
+                <a class="nav-link" href="#"><i data-feather="clipboard" style="width: 20px; margin-right: 6px"></i>My-Proyek</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        </aside>
+
+      <div class="content col">
+        @yield('content')
+      </div>
+    </div>
+
     </div>
   </div>
   

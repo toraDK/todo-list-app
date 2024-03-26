@@ -10,6 +10,8 @@ class Workspace extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function user(){
         return $this->hasOne(User::class);
     }
