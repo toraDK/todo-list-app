@@ -16,6 +16,12 @@ class TableName extends Model
         return $this->hasOne(User::class);
     }
 
+    public function workspace()
+    {
+        return $this->hasOne(Workspace::class);
+    }
+
+
     public function ToDoList()
     {
         return $this->hasMany(ToDoList::class);
