@@ -74,12 +74,14 @@
             <h6 class="mt-4 text-muted">
                 <span>MY WORKSPACE</span>
             </h6>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
+            @foreach ($workspaces as $workspace)
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
                 <li class="nav-item">
                 
-                <a class="nav-link" href="#"><i data-feather="clipboard" style="width: 20px; margin-right: 6px"></i>My-Proyek</a>
+                <a class="nav-link" href="#"><i data-feather="clipboard" style="width: 20px; margin-right: 6px"></i>{{ $workspace->workspace_name }}</a>
                 </li>
-            </ul>
+              </ul>
+            @endforeach
             </div>
         </nav>
         </aside>
