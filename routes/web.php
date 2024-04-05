@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\WorkspaceController;
+use App\Models\Workspace;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +33,5 @@ Route::get('/register', function () {
 });
 
 Route::resource('/board', BoardController::class);
-Route::resource('/workspace', BoardController::class);
 
-
-
+Route::get('/workspace/{id}',[ WorkspaceController::class, 'show']);

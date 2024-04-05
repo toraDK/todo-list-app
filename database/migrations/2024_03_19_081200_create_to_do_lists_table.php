@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('to_do_lists', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("id_user");
             $table->foreignId('id_table_name');
             $table->string('judul');
             $table->text('description')->nullable();

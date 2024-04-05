@@ -74,14 +74,20 @@
             <h6 class="mt-4 text-muted">
                 <span>MY WORKSPACE</span>
             </h6>
-            @foreach ($workspaces as $workspace)
+            {{-- @foreach ($workspaces as $workspace)
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
                 <li class="nav-item">
                 
                 <a class="nav-link" href="#"><i data-feather="clipboard" style="width: 20px; margin-right: 6px"></i>{{ $workspace->workspace_name }}</a>
                 </li>
               </ul>
-            @endforeach
+            @endforeach --}}
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start">
+              <li class="nav-item">
+              
+              <a class="nav-link" href="#"><i data-feather="clipboard" style="width: 20px; margin-right: 6px"></i>dsaohdisufjo</a>
+              </li>
+            </ul>
             </div>
         </nav>
         </aside>

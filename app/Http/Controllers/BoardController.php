@@ -23,7 +23,7 @@ class BoardController extends Controller
      */
     public function create()
     {
-        return view('board.workspace.create', [
+        return view('board.create', [
             "title" => "create"
         ]);
 
@@ -52,7 +52,10 @@ class BoardController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // return view('board.workspace.show', [
+        //     "title" => "workspace",
+        //     "workspace" => Workspace::find($id)
+        // ]);
     }
 
     /**
