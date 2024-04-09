@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\DB;
 class WorkspaceController extends Controller
 {
     //
-    public function show($id){
-        $workspace = Workspace::find($id);
+    public function show(Workspace $name){
+        // $workspace = Workspace::find($name);
+        $workspace = $name;
 
         $tableNames = DB::table('table_names')
         ->join('workspaces', 'table_names.id_workspace', '=', 'workspaces.id')
@@ -21,13 +22,13 @@ class WorkspaceController extends Controller
 
         // $toDos = [];
 
-        foreach ($tableNames as $table) {
-            $toDos = DB::table('to_do_lists')
-            ->join('table_names', 'to_do_lists.id_table_name', '=', 'table_names.id')
-            ->select('to_do_lists.*')
-            ->where('table_names.id', $table->id)
-            ->get();
-        }
+        // foreach ($tableNames as $table) {
+        //     $toDos = DB::table('to_do_lists')
+        //     ->join('table_names', 'to_do_lists.id_table_name', '=', 'table_names.id')
+        //     ->select('to_do_lists.*')
+        //     ->where('table_names.id', $table->id)
+        //     ->get();
+        // }
 
         // dd($workspace);
         // dd($tableName);
@@ -35,8 +36,8 @@ class WorkspaceController extends Controller
 
         return view('board.workspace.show', [
             "title" => "workspace",
-            "tableNames" => $tableNames,
-            "toDos" => $toDos
+            "tableNames" => $tableNames
+            // "toDos" => $toDos
         ]);
 
 

@@ -34,4 +34,4 @@ Route::get('/register', function () {
 
 Route::resource('/board', BoardController::class);
 
-Route::get('/workspace/{id}',[ WorkspaceController::class, 'show']);
+Route::get('/workspace/{name:workspace_name}',[ WorkspaceController::class, 'show']);
