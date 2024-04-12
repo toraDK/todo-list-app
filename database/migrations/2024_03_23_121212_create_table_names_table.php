@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('table_names', function (Blueprint $table) {
             $table->id();
             $table->foreignId("user_id");
-            $table->foreignId("id_workspace");
+            $table->foreignId("workspace_id");
             $table->string('table_name');
             $table->text('description')->nullable();
             $table->timestamps();

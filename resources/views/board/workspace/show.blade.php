@@ -17,7 +17,7 @@
         @else
             <p class="card-text">tidak ada deskripsi</p>
         @endif
-        <a href="#" class="btn btn-primary">check my list</a>
+        <a href="{{ $tableName->id_workspace}}/toDoList/{{ $tableName->table_name }}" class="btn btn-primary">check my list</a>
     </div>
 </div>
 @endforeach

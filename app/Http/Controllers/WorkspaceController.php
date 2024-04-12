@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TableName;
+use App\Models\ToDoList;
 use App\Models\Workspace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -40,6 +41,14 @@ class WorkspaceController extends Controller
             // "toDos" => $toDos
         ]);
 
+
+    }
+
+    public function showTable(TableName $workspace, $toDoList){
+
+        
+
+        return view('board.workspace.TodoList.show');
 
     }
 }

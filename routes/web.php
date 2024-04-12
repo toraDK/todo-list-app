@@ -35,4 +35,4 @@ Route::get('/register', function () {
 Route::resource('/board', BoardController::class);
 
 Route::get('/workspace/{name:workspace_name}',[ WorkspaceController::class, 'show']);
-// Route::get('/workspace/{name:workspace_name}/toDoList/{name}',[ WorkspaceController::class, 'show']);
+Route::get('/workspace/{workspace:id_workspace}/toDoList/{toDoList:table_name}',[ WorkspaceController::class, 'showTable']);
