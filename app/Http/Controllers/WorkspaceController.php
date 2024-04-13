@@ -48,7 +48,9 @@ class WorkspaceController extends Controller
 
         
 
-        return view('board.workspace.TodoList.show');
+        return view('board.workspace.TodoList.show', [
+            'title' => 'ToDoList'
+        ]);
 
     }
 }
