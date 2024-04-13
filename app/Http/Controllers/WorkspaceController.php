@@ -16,7 +16,7 @@ class WorkspaceController extends Controller
         $workspace = $name;
 
         $tableNames = DB::table('table_names')
-        ->join('workspaces', 'table_names.id_workspace', '=', 'workspaces.id')
+        ->join('workspaces', 'table_names.workspace_id', '=', 'workspaces.id')
         ->select('table_names.*')
         ->where('workspaces.id', $workspace->id)
         ->get();
