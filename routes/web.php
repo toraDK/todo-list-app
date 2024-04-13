@@ -29,7 +29,9 @@ Route::get('/login', function () {
 });
 
 Route::get('/register', function () {
-    return view('register.index', );
+    return view('register.index', [
+        'title' => 'register'
+    ]);
 });
 
 Route::resource('/board', BoardController::class);
